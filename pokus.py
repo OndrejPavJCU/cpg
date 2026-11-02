@@ -1,16 +1,14 @@
-def secti(a, b, c,):
-    vysledek = a + b +c
-    return vysledek
+def levenstein_dist(text1, text2):
+    levenstein = 0
+    lenght = min(len(text1), len(text2))
+    i = 0
+    while i < lenght:
+      if text1[0] != text2[0]:
+        levenstein += 1
+    i +- 0
+    return levenstein
 
-def je_delitelne_3(x):
-    zbytek = x % 3
-    if zbytek == 0:
-        return True
-    else:
-        return False
-
-if __name__=="__main__":
-    x = je_delitelne_3(6)
-    print("Je delitelne?", x)
-    #x = secti(1, 2, 3)
-    #print("Výsledek:",x)
+print(levenstein_dist("seznam","seznam"))
+print(levenstein_dist("seznam", "zoznam"))
+print(levenstein_dist("seznam", "seznamka"))
+print(levenstein_dist("seznamka", "zoznam"))
